@@ -1,0 +1,9 @@
+storage/
+infra/vpn/**/data/
+infra/vpn/**/clients/
+*.ovpn
+*.crt
+*.key
+*.pem
+.env
+*.log

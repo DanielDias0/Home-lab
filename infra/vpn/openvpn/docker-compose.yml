@@ -1,0 +1,15 @@
+services:
+  openvpn:
+    image: kylemanna/openvpn
+    container_name: openvpn
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "1194:1194/udp"
+    volumes:
+      - ./data:/etc/openvpn
+    environment:
+      - TZ=America/Sao_Paulo
+    sysctls:
+      - net.ipv4.ip_forward=1
